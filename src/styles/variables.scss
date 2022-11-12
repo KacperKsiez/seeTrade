@@ -1,0 +1,22 @@
+$attention: #ff4742;
+$attentionDarker: #dc3632;
+
+$fontColor: #222;
+$themeColor: #f4f4f4;
+
+$smallScreenSize: 840px;
+$mobileScreenSize: 470px;
+
+@mixin flatList($gap) {
+	display: flex;
+	align-items: center;
+	list-style-type: none;
+	gap: $gap;
+}
+
+@mixin verticalList($gap) {
+	list-style-type: none;
+	display: flex;
+	flex-direction: column;
+	gap: $gap;
+}

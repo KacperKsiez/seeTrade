@@ -1,0 +1,126 @@
+@import "https://fonts.googleapis.com/css?family=Open+Sans:300,regular,500,600,700,800,300italic,italic,500italic,600italic,700italic,800italic";
+
+@import "./header.scss";
+@import "./variables.scss";
+
+* {
+	font-family: "Open Sans", sans-serif;
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+	color: $fontColor;
+}
+
+.link {
+	text-decoration: none;
+	color: $fontColor;
+}
+
+.btn {
+	background: 0;
+	border: 2px solid $attention;
+	border-radius: 20px;
+	padding: 10px 20px;
+	font-size: 1em;
+	cursor: pointer;
+	transition: 0.25s;
+	position: relative;
+
+	&-drop-list {
+		display: none;
+	}
+
+	&:focus,
+	&:hover {
+		.btn-drop-list {
+			@include verticalList(0px);
+			position: absolute;
+			right: -14%;
+
+			top: 100%;
+			border-left: 2px solid $attention;
+			border-right: 2px solid $attention;
+
+			&-item {
+				padding: 10px 15px;
+				border-radius: 10px;
+				margin: 5px;
+				&:hover {
+					background-color: #f4f4f4;
+				}
+			}
+		}
+	}
+
+	&--attention {
+		background-color: $attention;
+		color: white;
+		font-weight: 600;
+
+		&:hover {
+			background-color: $attentionDarker !important;
+			border: 2px solid $attentionDarker;
+		}
+	}
+
+	&--clear {
+		border: 2px solid transparent;
+		padding: 8px;
+		&:hover {
+			background-color: #f4f4f4 !important;
+			color: $fontColor !important;
+		}
+	}
+	&--clear-zero {
+		border: 2px solid transparent;
+		padding: 8px;
+	}
+
+	&:hover {
+		background-color: $attention;
+		color: white;
+	}
+}
+
+.icon {
+	position: relative;
+
+	&-burger {
+		height: 45px;
+		width: 45px;
+		border-radius: 10px;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-around;
+
+		&-line {
+			height: 3px;
+			width: 100%;
+			background-color: $fontColor;
+			transition: 0.2s;
+		}
+
+		&--opened {
+			transform: translateX(-10px);
+			.icon-burger-line {
+				&:nth-child(1) {
+					transform: rotate(45deg) translateX(20px);
+				}
+				&:nth-child(2) {
+					opacity: 0;
+					transform: translateX(100%);
+				}
+				&:nth-child(3) {
+					transform: rotate(-45deg) translateX(20px);
+				}
+			}
+		}
+	}
+}
+
+.center {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 10px;
+}
