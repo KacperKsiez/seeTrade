@@ -1,0 +1,66 @@
+@import "./variables.scss";
+.content {
+	.first {
+		position: relative;
+		padding: 0 clamp(15px, 5vw, 120px);
+
+		height: 100vh;
+		width: 100%;
+		background: #234 url("../images/trucks.jpg") center no-repeat;
+		background-size: cover;
+		background-blend-mode: multiply;
+		display: flex;
+		align-items: center;
+		justify-content: space-around;
+		gap: 30px;
+
+		&__title,
+		&__subtitle {
+			color: white;
+
+			font-size: clamp(2em, 4vw, 3.2em);
+
+			font-weight: 200;
+		}
+		&__subtitle {
+			font-size: clamp(1em, 3vw, 1.8em);
+		}
+
+		&__arrow-down {
+			position: absolute;
+			bottom: 7%;
+			left: 0;
+			right: 0;
+			width: 60px;
+			margin-left: auto;
+			margin-right: auto;
+			height: 20px;
+			cursor: pointer;
+			animation: levitation 3s linear infinite;
+
+			&::before,
+			&::after {
+				content: "";
+				position: absolute;
+				background-color: rgba($color: white, $alpha: 0.5);
+				height: 4px;
+				width: 50%;
+				transform: skew(0, 25deg) translateY(150%);
+			}
+			&::after {
+				transform: skew(0, -25deg) translateY(150%);
+				left: 50%;
+			}
+		}
+	}
+
+	@media (max-width: $smallScreenSize) {
+		.first {
+			flex-direction: column;
+			justify-content: center;
+
+			text-align: center;
+			gap: 100px;
+		}
+	}
+}

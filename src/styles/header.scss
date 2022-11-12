@@ -1,6 +1,12 @@
 @import "./variables.scss";
 
 .main-header {
+	z-index: 100;
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	background-color: white;
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
@@ -8,7 +14,7 @@
 	padding: 15px clamp(15px, 5vw, 120px);
 
 	&__logo {
-		height: 85px;
+		height: 75px;
 		width: auto;
 	}
 
@@ -80,7 +86,7 @@
 				left: 0;
 				right: 0;
 				width: 10px;
-				background-color: $fontColor;
+				background-color: $attentionDarker;
 				transition: 0.25s;
 			}
 

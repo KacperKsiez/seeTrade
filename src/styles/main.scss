@@ -2,6 +2,9 @@
 
 @import "./header.scss";
 @import "./variables.scss";
+@import "./first.scss";
+@import "./numbers.scss";
+@import "./aboutUs.scss";
 
 * {
 	font-family: "Open Sans", sans-serif;
@@ -10,7 +13,9 @@
 	box-sizing: border-box;
 	color: $fontColor;
 }
-
+body {
+	background-color: #f4f4f4;
+}
 .link {
 	text-decoration: none;
 	color: $fontColor;
@@ -33,6 +38,7 @@
 	&:focus,
 	&:hover {
 		.btn-drop-list {
+			background-color: rgba($color: white, $alpha: 0.8);
 			@include verticalList(0px);
 			position: absolute;
 			right: -14%;
@@ -123,4 +129,28 @@
 	align-items: center;
 	justify-content: center;
 	gap: 10px;
+}
+
+.subtitle {
+	font-weight: 500;
+	font-size: clamp(1em, 4vw, 1em);
+
+	&--attention {
+		color: $attentionDarker;
+	}
+}
+
+.title {
+	font-size: clamp(1.6em, 5vw, 2.1em);
+
+	&-bold {
+		font-size: clamp(2.4em, 4vw, 3em);
+
+		font-weight: 800;
+	}
+}
+
+.img-fluid {
+	height: auto;
+	width: 100%;
 }
