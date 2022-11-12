@@ -1,11 +1,13 @@
 .about-us {
 	margin: 50px 0;
 	text-align: center;
+	padding: 15px clamp(15px, 6vw, 160px);
 
 	&__group {
 		margin-top: 60px;
+		grid-gap: 30px;
+
 		display: grid;
-		grid-template-rows: repeat(2, 1fr);
-		grid-template-columns: repeat(3, 1fr);
+		grid-template-columns: repeat(auto-fit, minmax(32%, 1fr));
 	}
 }

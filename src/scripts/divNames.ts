@@ -3,6 +3,11 @@ const divNames = {
 		navToggler: ".main-header__btns-menu-toggler",
 		nav: ".main-header__nav",
 	},
+	first: {
+		title: ".first__title",
+		subTitle: ".first__subtitle",
+		btnValuation: ".first__btn-valuation",
+	},
 };
 
 const divNamesNoDots = {

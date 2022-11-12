@@ -10,11 +10,11 @@
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
-
+	box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
 	padding: 15px clamp(15px, 5vw, 120px);
 
 	&__logo {
-		height: 75px;
+		height: 64px;
 		width: auto;
 	}
 
@@ -23,8 +23,7 @@
 		align-items: center;
 
 		&--opened {
-			padding: 15px clamp(15px, 5vw, 140px);
-			padding-top: 25px;
+			padding: 2px clamp(15px, 5vw, 140px);
 			align-items: flex-end;
 
 			position: fixed;
@@ -100,12 +99,17 @@
 	}
 
 	@media (max-width: $smallScreenSize) {
+		height: 70px;
+		&__logo {
+			height: 50px;
+		}
 		&__list {
 			display: none;
 		}
 		&__btns {
 			&-menu-toggler {
 				display: block;
+				order: 1;
 			}
 		}
 	}

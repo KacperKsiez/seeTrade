@@ -28,7 +28,7 @@
 
 		&__arrow-down {
 			position: absolute;
-			bottom: 7%;
+			bottom: 10%;
 			left: 0;
 			right: 0;
 			width: 60px;
@@ -38,18 +38,8 @@
 			cursor: pointer;
 			animation: levitation 3s linear infinite;
 
-			&::before,
-			&::after {
-				content: "";
-				position: absolute;
-				background-color: rgba($color: white, $alpha: 0.5);
-				height: 4px;
-				width: 50%;
-				transform: skew(0, 25deg) translateY(150%);
-			}
-			&::after {
-				transform: skew(0, -25deg) translateY(150%);
-				left: 50%;
+			path {
+				color: rgba($color: white, $alpha: 0.5);
 			}
 		}
 	}
