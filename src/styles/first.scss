@@ -1,6 +1,8 @@
 @import "./variables.scss";
 .content {
 	.first {
+		overflow-x: hidden;
+
 		position: relative;
 		padding: 0 clamp(15px, 5vw, 120px);
 

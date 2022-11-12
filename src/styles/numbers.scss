@@ -1,6 +1,7 @@
 .our-numbers {
 	margin-top: 65px;
 	text-align: center;
+	overflow-x: hidden;
 
 	&__group {
 		flex-wrap: wrap;
@@ -14,5 +15,8 @@
 	&__number {
 		min-width: 300px;
 		padding: clamp(20px, 7vh, 80px);
+	}
+	&__title {
+		overflow-x: hidden;
 	}
 }

@@ -8,6 +8,16 @@ const divNames = {
 		subTitle: ".first__subtitle",
 		btnValuation: ".first__btn-valuation",
 	},
+	numbers: {
+		title: ".our-numbers__title",
+		subTitle: ".our-numbers__subtitle",
+		statName: ".our-numbers__statName",
+		statDesc: ".our-numbers__statDesc",
+	},
+	aboutUs: {
+		title: ".about-us__title",
+		subTitle: ".about-us__subTitle",
+	},
 };
 
 const divNamesNoDots = {

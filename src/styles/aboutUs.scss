@@ -2,6 +2,7 @@
 	margin: 50px 0;
 	text-align: center;
 	padding: 15px clamp(15px, 6vw, 160px);
+	overflow-x: hidden;
 
 	&__group {
 		margin-top: 60px;
