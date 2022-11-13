@@ -1,0 +1,11 @@
+.last {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 3em;
+
+	padding: clamp(15px, 5vw, 140px);
+
+	section {
+		flex: 1;
+	}
+}
