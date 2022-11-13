@@ -85,14 +85,13 @@
 				left: 0;
 				right: 0;
 				width: 10px;
-				background-color: $attentionDarker;
+				background-color: $attention;
 				transition: 0.25s;
 			}
 
 			&:hover {
 				&::after {
 					width: 100%;
-					background-color: $attention;
 				}
 			}
 		}

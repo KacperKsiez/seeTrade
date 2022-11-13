@@ -6,9 +6,13 @@
 
 	&__group {
 		margin-top: 60px;
-		grid-gap: 30px;
-
+		overflow-x: scroll;
+		position: relative;
 		display: grid;
-		grid-template-columns: repeat(auto-fit, minmax(32%, 1fr));
+		column-gap: 2em;
+		grid-template-columns: repeat(6, 1fr);
+	}
+	&__tile {
+		width: min(85vw, 450px);
 	}
 }

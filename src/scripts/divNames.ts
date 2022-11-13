@@ -17,6 +17,8 @@ const divNames = {
 	aboutUs: {
 		title: ".about-us__title",
 		subTitle: ".about-us__subTitle",
+		slider: ".about-us__group",
+		tile: ".about-us__tile",
 	},
 };
 

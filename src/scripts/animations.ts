@@ -14,6 +14,7 @@ function firstDivTimeline() {
 	});
 
 	timeline.from(first.title, {
+		delay: 0.4,
 		x: -300,
 		opacity: 0,
 	});
@@ -67,6 +68,7 @@ function aboutUsTimeline() {
 		x: 300,
 		opacity: 0,
 		stagger: 0.4,
+		delay: 0.3,
 
 		scrollTrigger: {
 			trigger: aboutUs.subTitle,
@@ -75,12 +77,15 @@ function aboutUsTimeline() {
 	const optionsReverseX = {
 		x: -300,
 		opacity: 0,
+		delay: 0.3,
 		stagger: 0.4,
 
 		scrollTrigger: {
 			trigger: aboutUs.subTitle,
 		},
 	};
+
+	gsap.from(aboutUs.tile, options);
 
 	gsap.from(aboutUs.title, options);
 	gsap.from(aboutUs.subTitle, optionsReverseX);

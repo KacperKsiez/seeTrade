@@ -1,7 +1,7 @@
 @import "./variables.scss";
 .content {
 	.first {
-		overflow-x: hidden;
+		overflow: hidden;
 
 		position: relative;
 		padding: 0 clamp(15px, 5vw, 120px);
@@ -52,7 +52,7 @@
 			justify-content: center;
 
 			text-align: center;
-			gap: 100px;
+			gap: clamp(30px, 10vh, 100px);
 		}
 	}
 }

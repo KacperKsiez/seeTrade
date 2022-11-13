@@ -1,0 +1,42 @@
+@import "./variables.scss";
+
+.for-client,
+.for-carrier {
+	text-align: center;
+
+	&__desc {
+		margin: 65px 0;
+		height: 80vh;
+		background: #456 url("../images/road3.jpg") no-repeat center;
+		background-blend-mode: multiply;
+		background-attachment: fixed;
+		display: flex;
+		align-items: center;
+		justify-content: space-around;
+		flex-wrap: wrap;
+		text-align: left;
+	}
+
+	&__list {
+		@include verticalList(0.5em);
+		font-weight: 400;
+		font-size: clamp(0.9em, 3vw, 1.4em);
+
+		li {
+			color: white;
+		}
+	}
+	@media (max-width: $smallScreenSize) {
+		&__list {
+			padding: 0 clamp(15px, 5vw, 140px);
+		}
+	}
+}
+
+.for-client {
+	&__desc {
+		background: #456 url("../images/road4.jpg") no-repeat center;
+		background-blend-mode: multiply;
+		background-attachment: fixed;
+	}
+}
